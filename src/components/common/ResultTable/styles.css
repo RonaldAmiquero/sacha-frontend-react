@@ -1,0 +1,15 @@
+html .table-container-custom {
+   width: 75%;
+   margin: 0 auto;
+}
+
+.table-container-custom .MuiButton-contained {
+   background-color: var(--info);
+   color: var(--light);
+   font-size: 1.1rem;
+}
+
+.table-container-custom .MuiButton-contained:hover {
+   opacity: 0.8;
+   background-color: var(--info);
+}

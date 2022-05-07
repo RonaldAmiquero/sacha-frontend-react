@@ -1,0 +1,14 @@
+.Result__title {
+   font-size: 2.5rem;
+   font-weight: bold;
+   margin-bottom: 3rem;
+   text-align: center;
+   color: var(--primary-color);
+}
+.Result__return {
+   margin-bottom: 1rem;
+}
+.Result__return svg {
+   font-size: 3.4rem;
+   fill: var(--dark);
+}

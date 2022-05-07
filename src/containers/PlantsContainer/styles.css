@@ -1,0 +1,10 @@
+.PlantsContainer {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, 30rem);
+   gap: 2.5rem;
+   place-content: center;
+}
+
+.PlantsContainer a {
+   text-decoration: none;
+}

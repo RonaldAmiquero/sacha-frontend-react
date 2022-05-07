@@ -1,0 +1,39 @@
+.PlantsItem {
+   display: flex;
+   flex-direction: column;
+   width: 30rem;
+   height: 31.4rem;
+   border-radius: 1rem;
+   box-shadow: -1px 9px 14px 4px rgba(0, 0, 0, 0.25);
+   cursor: pointer;
+   overflow: hidden;
+   transition: transform 0.1s cubic-bezier(0, 2.73, 1, 1);
+}
+.PlantsItem:hover {
+   transform: scale(1.05);
+}
+
+.PlantsItem__name {
+   background-color: var(--primary-color);
+   overflow: hidden;
+   height: 3.7rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.PlantsItem__name > h2 {
+   color: var(--light);
+   font-size: 2.1rem;
+   font-weight: 600;
+}
+.PlantsItem__image {
+   width: 100%;
+   height: calc(100% - 3.7rem);
+   background-color: var(--primary-color);
+}
+
+.PlantsItem__image > img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}

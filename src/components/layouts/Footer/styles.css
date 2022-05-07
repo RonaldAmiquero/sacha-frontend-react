@@ -1,0 +1,15 @@
+.Footer {
+   height: 5rem;
+   background-color: var(--primary-color);
+   text-align: center;
+   font-size: 2rem;
+   color: var(--light);
+   font-weight: bold;
+   margin-top: 2.4rem;
+   display: flex;
+   align-items: center;
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   z-index: 100;
+}
