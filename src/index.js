@@ -3,13 +3,16 @@ import ReactDOM from 'react-dom/client'
 import './styles/globalStyles.css'
 import { App } from './routes/App'
 import { BrowserRouter } from 'react-router-dom'
+import { ContextWrapper } from './context/AppContext'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
    <React.StrictMode>
-      <BrowserRouter>
-         <App />
-      </BrowserRouter>
+      <ContextWrapper>
+         <BrowserRouter>
+            <App />
+         </BrowserRouter>
+      </ContextWrapper>
    </React.StrictMode>
 )
 

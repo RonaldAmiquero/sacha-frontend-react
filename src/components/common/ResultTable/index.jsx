@@ -31,17 +31,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
    }
 }))
 
-function createData(nro, enfermedad, probabilidad) {
-   return { nro, enfermedad, probabilidad }
-}
-
-const rows = [
-   createData(1, 'La roya del cafe', 100),
-   createData(2, 'El minador', 10),
-   createData(3, 'Ginger', 7)
-]
-
-export const ResultTable = () => {
+export const ResultTable = ({ diseases }) => {
    return (
       <TableContainer component={Paper} className="table-container-custom">
          <Table aria-label="customized table">
@@ -54,11 +44,13 @@ export const ResultTable = () => {
                </TableRow>
             </TableHead>
             <TableBody>
-               {rows.map((row) => (
-                  <StyledTableRow key={row.name}>
-                     <StyledTableCell>{row.nro}</StyledTableCell>
-                     <StyledTableCell>{row.enfermedad}</StyledTableCell>
-                     <StyledTableCell align="right">{`${row.probabilidad}%`}</StyledTableCell>
+               {diseases.map((disease, index) => (
+                  <StyledTableRow key={index + 1}>
+                     <StyledTableCell>{index + 1}</StyledTableCell>
+                     <StyledTableCell>{disease.name}</StyledTableCell>
+                     <StyledTableCell align="right">
+                        {`${disease.probability}%`}
+                     </StyledTableCell>
                      <StyledTableCell align="center">
                         <Button variant="contained">Buscar</Button>
                      </StyledTableCell>

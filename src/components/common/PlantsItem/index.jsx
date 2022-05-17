@@ -1,13 +1,13 @@
 import React from 'react'
 import './styles.css'
-export const PlantsItem = () => {
+export const PlantsItem = ({ nombre, titulo, url }) => {
    return (
       <figure className="PlantsItem">
          <figcaption className="PlantsItem__name">
-            <h2>Cafe</h2>
+            <h2>{nombre}</h2>
          </figcaption>
          <div className="PlantsItem__image">
-            <img src="https://i.postimg.cc/pr3gpY2t/cafe.png" alt="Plant" />
+            <img src={url} alt={titulo} />
          </div>
       </figure>
    )
