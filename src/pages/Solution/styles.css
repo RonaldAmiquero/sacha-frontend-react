@@ -1,0 +1,90 @@
+.Solution__title {
+   font-size: 2.4rem;
+   font-weight: bold;
+   margin-bottom: 3rem;
+   text-align: center;
+   color: var(--primary-color);
+}
+.Solution__return {
+   margin-bottom: 1rem;
+}
+.Solution__return svg {
+   font-size: 3.4rem;
+   fill: var(--dark);
+}
+.Solution__imagenes {
+   display: flex;
+   width: 80%;
+   margin: 0 auto;
+   margin-bottom: 3rem;
+   border-radius: 2rem 2rem 2rem 2rem;
+   overflow: hidden;
+   box-shadow: -2px 7px 14px 4px rgb(0 0 0 / 25%);
+}
+
+.Solution__imagen {
+   width: 50%;
+   height: auto;
+}
+
+.Solution__imagen img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.Disease {
+   width: 90%;
+   height: auto;
+   padding: 2rem;
+   margin: 0 auto;
+   border-radius: 2rem 2rem 2rem 2rem;
+   box-shadow: 1px 4px 8px 0px rgb(0 0 0 / 25%);
+   text-align: center;
+   margin-bottom: 4rem;
+}
+
+.Disease > h2 {
+   font-size: 2rem;
+   font-weight: 600;
+   color: var(--info);
+   margin-bottom: 1rem;
+}
+
+.Disease > p {
+   font-size: 1.6rem;
+   font-weight: 500;
+   color: var(--primary-color);
+   margin-bottom: 1rem;
+}
+
+.Solution__actions {
+   display: flex;
+   justify-content: space-between;
+   width: 90%;
+   margin: 0 auto;
+}
+
+.Solution__action > a {
+   text-decoration: none;
+}
+
+.Solution__action .Solution__print,
+.Solution__action .Solution__print:hover {
+   font-size: 1.4rem;
+   background-color: var(--info);
+}
+
+.Solution__action .Solution__home,
+.Solution__action .Solution__home:hover {
+   font-size: 1.4rem;
+   background-color: var(--info);
+}
+.Disease__copy--left {
+   text-align: left;
+   padding-left: 2rem;
+}
+
+.Prevention__title {
+   color: var(--dark);
+}

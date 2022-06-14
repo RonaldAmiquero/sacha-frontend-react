@@ -7,6 +7,7 @@ import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
 import Paper from '@mui/material/Paper'
 import Button from '@mui/material/Button'
+import { Link } from 'react-router-dom'
 
 import './styles.css'
 
@@ -52,7 +53,9 @@ export const ResultTable = ({ diseases }) => {
                         {`${disease.probability}%`}
                      </StyledTableCell>
                      <StyledTableCell align="center">
-                        <Button variant="contained">Buscar</Button>
+                        <Link to={`/solution/${disease.id_disease}`}>
+                           <Button variant="contained">Buscar</Button>
+                        </Link>
                      </StyledTableCell>
                   </StyledTableRow>
                ))}
