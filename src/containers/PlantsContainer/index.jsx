@@ -1,17 +1,25 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import axios from 'axios'
 import { PlantsItem } from '../../components/common/PlantsItem'
+import { useDebounce } from '../../hooks/useDebounce'
 import './styles.css'
 
 export const PlantsContainer = () => {
    const [plants, setPlants] = useState([])
+   let [searchParams] = useSearchParams()
+   let searchText = useDebounce(searchParams.get('search'), 1000)
+
+   let searchQuery = searchText
+      ? `http://localhost:3002/api/v1/plant/?search=${searchText}`
+      : 'http://localhost:3002/api/v1/plant'
+
    useEffect(() => {
-      const plants = axios.get('http://localhost:3002/api/v1/plant')
+      const plants = axios.get(searchQuery)
       plants.then((res) => {
          setPlants(res.data.body)
       })
-   }, [])
+   }, [searchQuery])
    return (
       <section className="PlantsContainer">
          {plants.map((plant) => (

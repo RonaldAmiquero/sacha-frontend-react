@@ -9,9 +9,16 @@ export const useInitialState = () => {
          diseases: payload
       })
    }
+   const addIdPlant = (payload) => {
+      setStore({
+         ...store,
+         idPlant: payload
+      })
+   }
 
    const actions = {
-      addResultDisease
+      addResultDisease,
+      addIdPlant
    }
 
    return {

@@ -25,3 +25,17 @@
    opacity: 0.8;
    background-color: var(--info);
 }
+
+@media screen and (max-width: 475px) {
+   .Diagnostic {
+      margin-top: 3.4rem;
+   }
+   .Diagnostic__title {
+      font-size: 1.8rem;
+      margin-bottom: 1.8rem;
+   }
+
+   .Diagnostic__return {
+      margin-bottom: 0.3rem;
+   }
+}

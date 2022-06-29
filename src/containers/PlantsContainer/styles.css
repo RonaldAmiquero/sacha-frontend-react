@@ -8,3 +8,11 @@
 .PlantsContainer a {
    text-decoration: none;
 }
+
+@media screen and (max-width: 475px) {
+   .PlantsContainer {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 14rem);
+      gap: 1rem;
+   }
+}

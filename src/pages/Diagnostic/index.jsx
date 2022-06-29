@@ -22,7 +22,7 @@ export const Diagnostic = () => {
    }, [id])
    const handleClickProcesar = (e) => {
       e.preventDefault()
-      console.log('procesar: ', anomalies)
+      // console.log('procesar: ', anomalies)
       const resultProcess = axios.post(
          `http://localhost:3002/api/v1/diagnostic/process`,
          {
@@ -32,7 +32,8 @@ export const Diagnostic = () => {
       resultProcess.then((resultProcess) => {
          navigate('../../result', { replace: true })
          actions.addResultDisease(resultProcess.data.body)
-         console.log('resultProcess: ', resultProcess.data.body)
+         //actions.addIdPlant(id)
+         //console.log('resultProcess: ', resultProcess.data.body)
       })
    }
 

@@ -25,3 +25,13 @@ html .Options__item .MuiFormControlLabel-label {
 html .Options__item svg {
    font-size: 1.9rem;
 }
+
+@media screen and (max-width: 475px) {
+   .Question__title {
+      font-size: 1.8rem;
+   }
+
+   .Question__options {
+      width: 90%;
+   }
+}

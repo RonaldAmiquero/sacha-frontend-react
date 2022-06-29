@@ -6,3 +6,10 @@
    margin-bottom: 4rem;
    margin-top: 4rem;
 }
+
+@media screen and (max-width: 475px) {
+   .Home__title {
+      font-size: 2.2rem;
+      margin-bottom: 2.2rem;
+   }
+}

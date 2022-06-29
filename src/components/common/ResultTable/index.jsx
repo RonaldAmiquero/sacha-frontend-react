@@ -52,7 +52,7 @@ export const ResultTable = ({ diseases }) => {
                      <StyledTableCell align="right">
                         {`${disease.probability}%`}
                      </StyledTableCell>
-                     <StyledTableCell align="center">
+                     <StyledTableCell align="center" className="solution-buscar">
                         <Link to={`/solution/${disease.id_disease}`}>
                            <Button variant="contained">Buscar</Button>
                         </Link>

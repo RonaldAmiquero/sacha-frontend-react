@@ -88,3 +88,49 @@
 .Prevention__title {
    color: var(--dark);
 }
+
+@media screen and (max-width: 475px) {
+   .Solution {
+      margin-top: 3.4rem;
+   }
+
+   .Solution__title {
+      font-size: 1.8rem;
+   }
+
+   .Solution__imagenes {
+      width: 90%;
+      border-radius: 1rem;
+   }
+
+   .Disease {
+      width: 98%;
+      padding: 1.6rem;
+   }
+
+   .Disease > h2 {
+      font-size: 1.8rem;
+   }
+
+   .Disease > p {
+      font-size: 1.4rem;
+   }
+
+   .Solution__actions {
+      width: 98%;
+   }
+
+   .Solution__action > a {
+      text-decoration: none;
+   }
+
+   .Solution__action .Solution__print,
+   .Solution__action .Solution__print:hover {
+      font-size: 1.2rem;
+   }
+
+   .Solution__action .Solution__home,
+   .Solution__action .Solution__home:hover {
+      font-size: 1.2rem;
+   }
+}

@@ -7,8 +7,20 @@
 }
 .Result__return {
    margin-bottom: 1rem;
+   background: none;
+   border: none;
 }
 .Result__return svg {
    font-size: 3.4rem;
    fill: var(--dark);
+}
+
+@media screen and (max-width: 475px) {
+   .Result {
+      margin-top: 3.4rem;
+   }
+
+   .Result__title {
+      font-size: 1.8rem;
+   }
 }

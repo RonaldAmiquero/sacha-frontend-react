@@ -46,3 +46,18 @@
    fill: var(--dark);
    font-size: 2.5rem;
 }
+
+@media screen and (max-width: 475px) {
+   .Header {
+      height: auto;
+      padding: 0.9rem 0;
+   }
+   .Header-container {
+      justify-content: space-around;
+      flex-wrap: wrap;
+   }
+
+   .Header__logo {
+      margin-bottom: 0.8rem;
+   }
+}

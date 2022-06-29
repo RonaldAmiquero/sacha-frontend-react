@@ -1,5 +1,5 @@
 html .table-container-custom {
-   width: 75%;
+   width: 100%;
    margin: 0 auto;
 }
 
@@ -12,4 +12,8 @@ html .table-container-custom {
 .table-container-custom .MuiButton-contained:hover {
    opacity: 0.8;
    background-color: var(--info);
+}
+
+.table-container-custom .solution-buscar a {
+   text-decoration: none;
 }
