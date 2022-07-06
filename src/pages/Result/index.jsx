@@ -8,7 +8,7 @@ import './styles.css'
 export const Result = () => {
    const { store } = useContext(AppContext)
    //const navigate = useNavigate()
-   console.log(store)
+   console.log('store:', store)
    const returnLink = `/diagnostic/${store.idPlant}`
    return (
       <main className="Result">

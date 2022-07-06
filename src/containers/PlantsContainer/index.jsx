@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import axios from 'axios'
+import { config } from '../../config'
 import { PlantsItem } from '../../components/common/PlantsItem'
 import { useDebounce } from '../../hooks/useDebounce'
 import './styles.css'
@@ -11,8 +12,8 @@ export const PlantsContainer = () => {
    let searchText = useDebounce(searchParams.get('search'), 1000)
 
    let searchQuery = searchText
-      ? `http://localhost:3002/api/v1/plant/?search=${searchText}`
-      : 'http://localhost:3002/api/v1/plant'
+      ? `${config.api}/plant?search=${searchText}`
+      : `${config.api}/plant`
 
    useEffect(() => {
       const plants = axios.get(searchQuery)

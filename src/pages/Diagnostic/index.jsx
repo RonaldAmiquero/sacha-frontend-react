@@ -4,6 +4,7 @@ import axios from 'axios'
 import { MdKeyboardBackspace } from 'react-icons/md'
 import { MdSettings } from 'react-icons/md'
 import { Link, useParams, useNavigate } from 'react-router-dom'
+import { config } from '../../config'
 import { AppContext } from '../../context/AppContext'
 import { Question } from '../../components/common/Question'
 import './styles.css'
@@ -15,7 +16,7 @@ export const Diagnostic = () => {
    const { id } = useParams()
 
    useEffect(() => {
-      const resultQuestions = axios.get(`http://localhost:3002/api/v1/diagnostic/${id}`)
+      const resultQuestions = axios.get(`${config.api}/diagnostic/${id}`)
       resultQuestions.then((res) => {
          setQuestions(res.data.body)
       })
@@ -23,16 +24,14 @@ export const Diagnostic = () => {
    const handleClickProcesar = (e) => {
       e.preventDefault()
       // console.log('procesar: ', anomalies)
-      const resultProcess = axios.post(
-         `http://localhost:3002/api/v1/diagnostic/process`,
-         {
-            data: { idPlanta: id, hechos: anomalies }
-         }
-      )
+      const resultProcess = axios.post(`${config.api}/diagnostic/process`, {
+         data: { idPlanta: id, hechos: anomalies }
+      })
       resultProcess.then((resultProcess) => {
          navigate('../../result', { replace: true })
+         actions.addIdPlant(id)
          actions.addResultDisease(resultProcess.data.body)
-         //actions.addIdPlant(id)
+
          //console.log('resultProcess: ', resultProcess.data.body)
       })
    }

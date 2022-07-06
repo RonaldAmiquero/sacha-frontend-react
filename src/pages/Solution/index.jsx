@@ -6,6 +6,7 @@ import { FaHome } from 'react-icons/fa'
 import { FcPrint } from 'react-icons/fc'
 import { useParams } from 'react-router-dom'
 import Button from '@mui/material/Button'
+import { config } from '../../config'
 import './styles.css'
 
 export const Solution = () => {
@@ -16,7 +17,7 @@ export const Solution = () => {
    console.log(images)
 
    useEffect(() => {
-      axios.get(`http://localhost:3002/api/v1/solution/${id}`).then((res) => {
+      axios.get(`${config.api}/solution/${id}`).then((res) => {
          setSolution(res.data.body)
          setLoading(false)
       })
